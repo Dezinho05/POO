@@ -21,13 +21,16 @@ public class Carro extends Veiculo implements Alugavel {
 		System.out.println(super.toString() + "\n" + toString());
 	}
 	
-	public int calcularAluguel(int dias) {
-		
-		return 0;
+	public double calcularAluguel(int dias) {
+		return getPrecoDiaria() * dias;
+	}
+
+	public double calcularAluguel(int dias, float discount) {
+		return (getPrecoDiaria() * dias) - discount;
 	}
 	
 	public String toString() {
-		return "Carro [quantidadePortas=" + getQuantidadePortas() + "]";
+		return "Carro [Modelo:" + getModelo() + "Marca:" + getMarca() + "Ano:" + getAno() + "Diaria:" + getPrecoDiaria() + "Cilindradas:" + getQuantidadePortas() + "]";
 	}
 
 }

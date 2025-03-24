@@ -17,15 +17,21 @@ public class Moto extends Veiculo implements Alugavel{
 		this.cilindrada = cilindrada;
 	}
 
-	public void exibirDetalhes() {
-		System.out.println(super.toString() + "\n" + toString());
+	
+	public double calcularAluguel(int dias) {
+		return getPrecoDiaria() * dias;
 	}
 	
-	public int calcularAluguel(int dias) {
-		return 0;
+	public double calcularAluguel(int dias, float discount) {
+		return (getPrecoDiaria() * dias) - discount;
+	}
+	
+	
+	public String toString(){
+		return "Moto [Modelo:" + getModelo() + "Marca:" + getMarca() + "Ano:" + getAno() + "Diaria:" + getPrecoDiaria() + "Cilindradas:" + getCilindrada() + "]";
 	}
 
-	public String toString(){
-		return "Moto [cilindradas =" + getCilindrada() + "]";
+	public void exibirDetalhes() {
+		System.out.println(super.toString() + "\n" + toString());
 	}
 }

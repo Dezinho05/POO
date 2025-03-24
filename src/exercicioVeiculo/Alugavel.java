@@ -1,5 +1,5 @@
 package exercicioVeiculo;
 
 public interface Alugavel {
-	public abstract int calcularAluguel(int dias);
+	public abstract double calcularAluguel(int dias);
 }
