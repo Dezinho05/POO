@@ -6,7 +6,7 @@ public class Carro extends Veiculo implements Alugavel {
 	
 	public Carro(String modelo, String marca, int ano, double precoDiaria, int quantidadePortas) {
 		super(modelo, marca, ano, precoDiaria);
-		this.setQuantidadePortas(quantidadePortas);
+		setQuantidadePortas(quantidadePortas);
 	}
 	
 	private int getQuantidadePortas() {

@@ -8,10 +8,10 @@ public abstract class Veiculo {
 
 	public Veiculo(String modelo, String marca, int ano, double precoDiaria) {
 		super();
-		this.modelo = modelo;
-		this.marca = marca;
-		this.ano = ano;
-		this.precoDiaria = precoDiaria;
+		setModelo(modelo);
+		setMarca(marca);
+		setAno(ano);
+		setPrecoDiaria(precoDiaria);
 
 	}
 
